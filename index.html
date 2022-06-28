@@ -11,12 +11,14 @@
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./css/modern-normalize.css" />
+		<!--<link rel="stylesheet" href="./css/modern-normalize.css" />-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 	<body class="page">
 		<!-- Верхняя линия -->
-		<header class="header">
+		<div class="container">
+			<header class="header">
 			<nav>
 				<a href="./index.html" class="link logo">Web<span class="logo-black">Studio</span>
 				</a>
@@ -31,17 +33,23 @@
 				<li><a href="tel:+380961111111" class="link contact-list">+38 096 111 11 11</a></li>
 			</ul>
 		</header>
+		</div>
+		
 		<!-- Основная часть -->
 		<main>
 			<!-- Hero -->
-			<section class="hero">
+			<div class="container">
+				<section class="section hero">
 				<h1 class="title hero-title">
 					Эффективные решения для вашего бизнеса
 				</h1>
 				<button type="button" class="btn">Заказать услугу</button>
 			</section>
+			</div>
+			
 			<!-- Наши преимущества -->
-			<section class="benefits">
+			<div class="container">
+				<section class="section benefits">
 				<h2 class="hidden-title">Наши преимущества</h2>
 				<ul class="list benefits-list">
 					<li class="benefits-item">
@@ -62,8 +70,11 @@
 					</li>
 				</ul>
 			</section>
+			</div>
+			
 			<!-- Чем мы занимаемся -->
-			<section class="work">
+			<div class="container">
+				<section class="section work">
 				<h2 class="title section-title">Чем мы занимаемся</h2>
 				<ul class="list work-list">
 					<li class="work-item">
@@ -77,8 +88,10 @@
 					</li>
 				</ul>
 			</section>
+			</div>
 			<!-- Наша команда -->
-			<section class="team">
+			<div class="container">
+				<section class="section team">
 				<h2 class="title section-title">Наша команда</h2>
 				<ul class="list team-list">
 					<li class="team-item">
@@ -103,9 +116,12 @@
 					</li>
 				</ul>
 			</section>
+			</div>
+			
 		</main>
 		<!-- Подвал -->
-		<footer class="footer">
+		<div class="container">
+			<footer class="footer">
 			<a href="./index.html" class="link logo">Web<span class="logo-white">Studio</span>
 			</a>
 			<address class="adress">
@@ -125,5 +141,7 @@
 				</ul>
 			</address>
 		</footer>
+		</div>
+		
 	</body>
 </html>

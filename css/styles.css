@@ -15,13 +15,35 @@ body {
     letter-spacing: 0.03em;
     color: var(--secondary-color);
 }
+
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
 .header,
 .hero,
 .benefits,
 .work,
 .team,
 .footer,
-.portfolio{outline: 2px solid green;}
+.portfolio {
+    outline: 2px solid green;
+}
+
+.container {
+    width: 1200px;
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .title {
     color: var(--pimary-color);
@@ -42,7 +64,8 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
+    border-bottom: 1px solid #ECECEC;
+
 }
 
 .logo {
@@ -85,14 +108,16 @@ body {
 .hero,
 .footer {
     background-color: var(--bg-color)
-        
+}
+
+.hero {
+    text-align: center;
 }
 
 .hero-title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white);
@@ -104,7 +129,6 @@ body {
     font-size: 16px;
     line-height: 1.88;
     align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--white);
     background-color: var(--accent-color);
@@ -114,9 +138,7 @@ body {
 }
 
 /*benefits*/
-.benefits {
-    
-}
+.benefits {}
 
 .hidden-title {
     display: none;
@@ -157,9 +179,7 @@ body {
 }
 
 /*footer*/
-.footer {
-    
-}
+.footer {}
 
 .logo-white {
     color: var(--white);
