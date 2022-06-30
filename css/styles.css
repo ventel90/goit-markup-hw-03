@@ -6,25 +6,31 @@
     --bg-btn: #F5F4FA;
     --white: #FFFFFF;
     --black: #000000;
+    --border: #ECECEC;
+    --border-card: #EEEEEE;
 }
 
 body {
+    width: 1600px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-color);
+    
 }
 
 h1,
 h2,
 h3,
+ul,
+li,
 p {
     padding: 0;
     margin: 0;
 }
 
-.header,
+/*.header,
 .hero,
 .benefits,
 .work,
@@ -32,15 +38,18 @@ p {
 .footer,
 .portfolio {
     outline: 2px solid green;
-}
+}*/
 
 .container {
     width: 1200px;
-    padding: 0;
-    margin: 0;
+    margin-left: 215px;
+    margin-right: 215px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section {
+    width: 1600px;
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -60,12 +69,22 @@ p {
 
 /*header*/
 .header {
+    width: 1600px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid var(--border);
 
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -81,8 +100,17 @@ p {
     color: var(--black)
 }
 
-.site-nav-list .link {
+.site-nav-list {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 93px;
+
     color: var(--pimary-color);
+}
+
+.site-nav-list .item+.item {
+    margin-left: 50px;
 }
 
 .site-nav-list .active-page {
@@ -95,8 +123,16 @@ p {
     color: var(--accent-color);
 }
 
-.contact-list {
+.contacts {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
     color: var(--secondary-color);
+}
+
+.contacts .item+.item {
+    margin-left: 50px;
 }
 
 .contacts a:hover,
@@ -104,17 +140,31 @@ p {
     color: var(--accent-color);
 }
 
+.site-nav-list .link,
+.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 /*hero*/
 .hero,
 .footer {
+    width: 1600px;
     background-color: var(--bg-color)
 }
 
 .hero {
+    height: 600px;
     text-align: center;
+    box-sizing: border-box;
+    padding: 0px;
+    margin-left: auto;
 }
 
 .hero-title {
+    padding-top: 200px;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -124,6 +174,7 @@ p {
 }
 
 .hero .btn {
+    margin-bottom: 200px;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
@@ -140,8 +191,29 @@ p {
 /*benefits*/
 .benefits {}
 
+.benefits-list {
+    display: flex;
+}
+
+.benefit .item {
+    width: 270px;
+}
+
+.benefits-list .item+.item {
+    margin-left: 30px;
+}
+
 .hidden-title {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .benefits .title {
@@ -154,6 +226,20 @@ p {
 }
 
 /*work*/
+.work .title{
+    margin-bottom: 50px;
+}
+.work-list {
+    display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+.work-list .item+.item {
+    margin-left: 30px;
+}
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -164,8 +250,25 @@ p {
 }
 
 /*team*/
-.team {}
-
+.team{
+    background-color: var(--bg-btn);
+}
+.team .section-title {
+    margin-bottom: 50px;
+}
+.team-list .item+.item {
+    margin-left: 30px;
+}
+.team-list {
+    display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+.team. .item{
+    width: 270px;
+    height: 368px;
+}
 .team-title,
 .team-text {
     font-size: 16px;
@@ -175,17 +278,24 @@ p {
 }
 
 .team-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 
 /*footer*/
-.footer {}
+.footer{
+    padding-top: 60px;
+}
 
 .logo-white {
     color: var(--white);
 }
 
 .adress {
+    padding-bottom: 60px;
+    margin-top: 20px;
+    
     color: rgba(255, 255, 255, 0.6);
     font-style: inherit;
 }
@@ -211,6 +321,13 @@ p {
 }
 
 /*ПОРТФОЛИО*/
+.btn-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+.btn-list .item+.item {
+    margin-left: 8px;}
 .filter-button {
     font-family: 'Roboto';
     font-weight: 500;
@@ -218,6 +335,7 @@ p {
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
+    cursor: pointer;
     color: var(--pimary-color);
     background: var(--bg-btn);
     border: none;
@@ -230,9 +348,30 @@ p {
     background: var(--accent-color);
 }
 
-.portfolio-list {}
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards{
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-card);
+}
+.cards:nth-child(3n)
+{
+    margin-right: 0;
+}
+.cards:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
 
 .portfolio-title {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -241,6 +380,9 @@ p {
 }
 
 .portfolio-text {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
     font-size: 16px;
     line-height: 1.88;
 }
