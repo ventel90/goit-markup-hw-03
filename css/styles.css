@@ -8,12 +8,13 @@
     --black: #000000;
     --border: #ECECEC;
     --border-card: 1px solid #EEEEEE;
-    --card-set-gap: 30px;
+    --cards-set-gap: 30px;
+    --cards-item: 3;
     --team-shadow:0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     --team-br:border-radius: 0px 0px 4px 4px;}
-
+    
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -34,7 +35,6 @@ img {
     max-width: 100%;
     height: auto;}
 
-
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -45,7 +45,6 @@ img {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;}
-
 
 .title {
     color: var(--pimary-color);}
@@ -160,8 +159,6 @@ img {
 
 
 /*BENEFITS*/
-.benefits {}
-
 .hidden-title {
     position: absolute;
     width: 1px;
@@ -174,15 +171,20 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;}
 
-.benefits-list {
+.cards-set {
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-bottom: 10px;}
+    margin-top: calc(-1 * var(--cards-set-gap));
+    margin-left: calc(-1 * var(--cards-set-gap));}
 
-.benefits-list>.item {
-    flex-basis: calc(100%/4 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);}
+.cards-item {
+    flex-basis: calc(100%/var(--cards-item) - var(--cards-set-gap));
+    margin-top: var(--cards-set-gap);
+    margin-left: var(--cards-set-gap);}
+
+.benefits-list,
+.team-list{
+    --cards-item: 4;}
 
 .benefits-title {
     font-weight: 700;
@@ -193,16 +195,6 @@ img {
     margin-bottom: 10px;}
 
 /*WORK*/
-.work-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));}
-
-.work-list>.item{
-    flex-basis: calc(100%/3 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);}
-
-
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -210,25 +202,11 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--pimary-color);
-    margin-bottom: 50px;
-}
+    margin-bottom: 50px;}
 
 /*TEAM*/
 .team{
     background-color: var(--bg-btn);}
-
-.team-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));}
-
-    
-.team-list>.item{
-    flex-basis: calc(100%/4 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-    box-shadow: var(--team-shadow);
-    border-radius: var(--team-br);}
-
 
 .team-title,
 .team-text {
@@ -256,7 +234,7 @@ img {
 .adress {
     color: rgba(255, 255, 255, 0.6);
     font-style: inherit;}
-.adress .item:not(:last-child) {
+.contact-footer .contacts-item:not(:last-child) {
     margin-bottom: 9px;}
 
 .street {
@@ -275,8 +253,8 @@ img {
 .footer-contacts:focus {
     color: var(--accent-color);}
 
-/*ПОРТФОЛИО*/
 
+/*ПОРТФОЛИО*/
 /*BTNS*/
 .btn-list {
     display: flex;
@@ -306,15 +284,6 @@ img {
     background: var(--accent-color);
 }
 /*PORTFOLIO*/
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));}
-
-.portfolio-list>.cards{
-    flex-basis: calc(100%/3 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-    background: var(--white);}
     
 .cards-content {
     padding: 20px 24px;
