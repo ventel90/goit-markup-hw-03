@@ -104,8 +104,7 @@ img {
 
 .contacts {
     display: flex;
-    margin-left: auto;
-    color: var(--secondary-color);}
+    margin-left: auto;}
 
 .contacts .item:not(:last-child){
     margin-right: 50px;}
@@ -195,6 +194,9 @@ img {
     margin-bottom: 10px;}
 
 /*WORK*/
+.work{
+    padding-top: 0;}
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
